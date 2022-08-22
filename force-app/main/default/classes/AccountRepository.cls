@@ -9,5 +9,15 @@ public with sharing class AccountRepository {
         return accounts;
     }
 
+    public Account getAccountById(String id){
+        Account account = [SELECT Id, Name FROM Account WHERE Id = :id];
+        return account;
+    }
+
+    public void deleteAccountById(String id){
+        account = getAccountById(id);
+        delete account;
+    }
+
 
 }
