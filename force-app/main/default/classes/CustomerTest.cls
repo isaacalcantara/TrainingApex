@@ -9,6 +9,7 @@ public with sharing class CustomerTest {
 
         Customer custumer = new Customer('Isaac');
         custumer.save();
+        System.assert(customer.account.Id != null);
 
     }
 

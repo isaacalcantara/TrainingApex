@@ -1,5 +1,6 @@
 public with sharing class Customer {
 
+    @TestVisible
     Account account;
 
 
@@ -9,10 +10,6 @@ public with sharing class Customer {
 
     public Customer(String name){
         account = new Account(Name = name);
-    }
-
-    public void save(){
-        upsert account;
     }
 
 }
